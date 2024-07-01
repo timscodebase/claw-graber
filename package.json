@@ -3,11 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "web": "vite dev",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "db": "./server/pocketbase-mac serve",
-    "dev": "concurrently \"npm:web\" \"npm:db\"",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check . && eslint .",
