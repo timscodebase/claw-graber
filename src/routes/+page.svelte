@@ -1,9 +1,17 @@
+<script lang="ts">
+	import Ball from '$lib/ball'
+
+	$effect(() => {
+		const canvas = document.getElementById('canvas') as HTMLCanvasElement
+		const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
+
+		const ball = new Ball(ctx)
+
+		ball.drawBalls(10)
+	})
+</script>
+
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
-<button
-	class="border rounded p-2 mt-10 bg-gray-800 text-white hover:bg-gray-700"
-	on:click={() => (window.location.href = '/auth')}
->
-	Logout
-</button>
+<canvas id="canvas" width="800" height="600"></canvas>
